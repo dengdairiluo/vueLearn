@@ -38,3 +38,24 @@ var app = new Vue({
     data: obj
 })
 
+var data = { a: 1 }
+var vm = new Vue({
+    el: '#example',
+    data: data
+})
+
+vm.$data === data
+vm.$el === document.getElementById('example')
+
+vm.$watch('a', function(newValue, oldValue) {
+      // 这个回调将在 `vm.a` 改变后调用
+})
+
+var tmpVm = new Vue({
+    data: {
+        a: 1
+    },
+    created: function() {
+        console.log('a is: ' + this.a)
+    }
+})
