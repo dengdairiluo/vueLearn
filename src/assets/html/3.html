@@ -1,0 +1,49 @@
+<html>
+<div id="app">
+    <span>Message: {{ msg }} </span>
+    <p>Using mustaches {{ rawHtml }}</p>
+    <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+</div>
+<div v-bind:id="dynamicId"></div>
+<div>
+<!-- {{ number + 1 }}
+
+{{ ok ? 'YES' : 'NO' }}
+
+{{ message.split('').reverse().join('') }}
+
+<div v-bind:id="'list-' + id"></div> -->
+
+<!-- 这是语句，不是表达式 -->
+<!-- {{ var a = 1 }} -->
+
+<!-- 流控制也不会生效，请使用三元表达式 -->
+<!-- {{ if (ok) { return message } }} -->
+</div>
+
+<div id="app2">
+    <p v-if="seen">现在你看到我了</p>
+    <a v-bind:href="url">这是一个百度的链接</a>
+    <a v-on:click="doSomething">点我弹警告</a>
+</div>
+
+<div id="example">
+    <p>Original message: "{{ message }}"</p>
+    <p>Computed reversed message: "{{ reversedMessage }}"</p>
+</div>
+
+<div id="demo">
+    {{ fullName }}
+</div>
+
+<div id="watch-example">
+    <p>
+        Ask a yes/no question:
+        <input v-model="question">
+    </p>
+    <p>{{ answer }}</p>
+</div>
+
+</html>
+<script src="../js/vue.js"> </script>
+<script src="../js/3.js"></script>
