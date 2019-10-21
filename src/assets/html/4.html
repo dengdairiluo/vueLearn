@@ -1,0 +1,63 @@
+<html>
+<div id="app">
+    <div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }">这是app</div>
+</div>
+<div id="app1">
+    <div v-bind:class="classObject">这是app1</div>
+</div>
+<div id='app2'>
+    <div v-bind:class="classObject">这是app2</div>
+</div>
+<div id="app3">
+    <div v-bind:class="[activeClass, errorClass]">这是App3.1</div>
+    <div v-bind:class="[isActive ? activeClass : '', errorClass]">这是app3.2</div>
+</div>
+<div id="app4">
+    <my-component class="baz boo">这是app4</my-component>
+</div>
+<div id="app5">
+    <div v-bind:style="styleObject">这是app5</div>
+</div>
+<div>
+    <h1 v-if="awesome">Vue is awesome!</h1>
+    <h1 v-else>Oh no 😢</h1>
+</div>
+<div>
+    <div v-if="Math.random() > 0.5">
+        Now you see me
+    </div>
+    <div v-else>
+        Now you don't
+    </div>
+</div>
+<div>
+    <div v-if="type === 'A'">
+        A
+    </div>
+    <div v-else-if="type === 'B'">
+        B
+    </div>
+    <div v-else-if="type === 'C'">
+        C
+    </div>
+    <div v-else>
+        Not A/B/C
+    </div>
+</div>
+<div>
+    <template v-if="loginType === 'username'">
+        <label>Username</label>
+        <input placeholder="Enter your username">
+    </template>
+    <template v-else>
+        <label>Email</label>
+        <input placeholder="Enter your email address">
+    </template>
+</div>
+<div>
+    <h1 v-show="ok">Hello!</h1>
+</div>
+
+</html>
+<script src="../js/vue.js"> </script>
+<script src="../js/4.js"></script>
