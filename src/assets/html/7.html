@@ -68,6 +68,23 @@
     <input type="checkbox" v-model="toggle" true-value="yes" false-value="no">
 </div>
 
+<div>
+    <div id="components-demo">
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+    </div>
+</div>
+<div id="blogpost">
+    <blog-post title="My journey with Vue"></blog-post>
+    <blog-post title="Blogging with Vue"></blog-post>
+    <blog-post title="Why Vue is so fun"></blog-post>
+</div>
+<div id="blog-post-demo">
+    <blog-post v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title">
+    </blog-post>
+</div>
+
 </html>
 <script src="../js/vue.js"> </script>
 <script src="../js/7.js"></script>
