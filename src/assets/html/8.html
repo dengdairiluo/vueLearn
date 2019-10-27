@@ -1,0 +1,16 @@
+<html>
+<div id="app">
+    <component-a></component-a>
+    <component-b></component-b>
+    <component-c></component-c>
+</div>
+<div>
+    <BaseInput v-model="searchText" @keydown.enter="search" />
+    <BaseButton @click="search">
+        <BaseIcon name="search" />
+    </BaseButton>
+</div>
+
+</html>
+<script src="../js/vue.js"> </script>
+<script src="../js/8.js"></script>
