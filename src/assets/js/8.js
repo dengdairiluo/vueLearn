@@ -6,17 +6,17 @@ Vue.component('component-c', { /* ... */ })
 
 new Vue({ el: '#app' })
 
-var ComponentA = { /* ... */ }
-var ComponentB = { /* ... */ }
-var ComponentC = { /* ... */ }
+// var ComponentA = { /* ... */ }
+// var ComponentB = { /* ... */ }
+// var ComponentC = { /* ... */ }
 
-new Vue({
-  el: '#app',
-  components: {
-    'component-a': ComponentA,
-    'component-b': ComponentB
-  }
-})
+// new Vue({
+//   el: '#app',
+//   components: {
+//     'component-a': ComponentA,
+//     'component-b': ComponentB
+//   }
+// })
 
 // import ComponentA from './ComponentA'
 // import ComponentC from './ComponentC'
@@ -79,16 +79,16 @@ new Vue({
 //   )
 // })
 
-Vue.component('blog-post', {
-  props: ['postTitle'],
-  tempalte: '<h3>{{ postTitle }}</h3>'
-})
 
-new Vue({
-  el: '#app',
-  data: {
-    postTitle: ''
-  }
-})
 
 // props: ['title', 'likes', 'isPublished', 'commentIds', 'author']
+
+// props: {
+//   title: String,
+//   likes: Number,
+//   isPublished: Boolean,
+//   commentIds: Array,
+//   author: Object,
+//   callback: Function,
+//   contactsPromise: Promise // or any other constructor
+// }
