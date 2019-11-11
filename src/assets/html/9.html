@@ -1,7 +1,8 @@
 <html>
 <div id="app">
-    <blog-post post-title="hello!"></blog-post>
-    <blog-post title="My journey with Vue"></blog-post>
+    <my-component></my-component>
+    <blog-post title="hello!"></blog-post>
+    <blog-post v-bind:title="post.title + ' by ' + post.author.name"></blog-post>
 </div>
 
 </html>
